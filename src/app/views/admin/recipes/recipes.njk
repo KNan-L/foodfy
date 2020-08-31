@@ -1,0 +1,86 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receita</title>
+{% endblock %}
+
+{% block content %}
+
+    <section class="receita-preparo">
+            <div class="recipes" id="burger">
+                <div class="recipes-imagem">
+                    <img src="{{recipes.image}}" alt="">
+                </div>
+
+                <div class="recipes-titulo">
+                    <p>{{recipes.title}}</p>
+                </div>
+
+                <div class="recipes-autor">
+                    <p>por {{recipes.author}}</p>
+                </div>
+                
+
+                <div class="muda">
+                    <div class="combo">
+                        <div class="receita-subtitulo">
+                            <p>Ingredientes</p>
+                        </div>
+                        <div class="mostrar-esconder" id="showhide1">
+                            <p> Esconder </p>
+                        </div>
+                    </div>
+                    <div class="receita-texto" id="texto1">
+                        <ul>
+                        {% for ingredient in recipes.ingredients %}
+                            <li> {{ingredient}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                
+
+            <div class="muda">
+                <div class="combo">
+                    <div class="receita-subtitulo">
+                        <p>Modo de Preparo</p>
+                    </div>
+                    
+                    <div class="mostrar-esconder" id="showhide2">
+                        <p> Esconder </p>
+                    </div>                
+                </div>        
+                <div class="receita-texto" id="texto2">
+                    {% for preparation in recipes.preparation %}
+                        <p>{{preparation}}</p>
+                    {% endfor %}                
+                </div>
+            </div>
+                
+            <div class="muda">
+                <div class="combo">
+                    <div class="receita-subtitulo">
+                        <p>Informações Adicionais</p>                
+                    </div>
+                                    
+                    <div class="mostrar-esconder" id="showhide3">
+                        <p> Esconder </p>
+                    </div>                
+                </div>
+                <div class="receita-texto" id="texto3">
+                    <p>{{recipes.information}}</p>                
+                </div>
+            </div>
+
+            </div>
+
+</section>  
+
+    <script src="/scripttoggler.js"></script>
+
+{% endblock %}
+
+
+
+
+    

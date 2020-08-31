@@ -1,0 +1,43 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receita</title>
+{% endblock %}
+
+{% block content %}
+    
+   
+    <section class="back users">
+            <div class="div-novo buttoncreate">
+                <p class="titulo-admin">Usúario: {{user.name}}</p>
+                <a class="button" href="/admin/users/{{users.id}}/edit">Editar Usúario</a>
+            </div>
+
+            <div class="users">
+                <div class="show">
+                    <p class="edit-titulo">Nome</p>
+                    <p>{{user.name}}</p>
+                    
+                    <p class="edit-titulo">Email</p>
+                    <p>{{user.email}}</p>
+
+                    <p class="edit-titulo">É Administrador?</p>        
+                    {% if user.is_admin == "true" %}
+                        <p>Sim</p>
+                    {% else %}
+                        <p>Não</p>
+                    {% endif %}
+                </div>
+            </div>
+            
+    </section>  
+    
+    <script src="/scriptsadmin.js"></script>
+
+{% endblock %}
+
+
+
+
+
+    

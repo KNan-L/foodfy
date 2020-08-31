@@ -1,0 +1,121 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receita</title>
+{% endblock %}
+
+{% block content %}
+    
+   
+    <section class="back">
+            <div class="div-novo buttoncreate">
+                <p class="titulo-admin">Receita: {{recipes.title}}</p>
+                <a class="button" href="/admin/recipes/{{recipes.id}}/edit">Editar Receita</a>
+            </div>
+
+            <div class="recipes admin" >                
+                    <div class="gallery">
+                        <div class="recipes-imagem highlight">
+                            {% if not files[0] %}
+                                <img src="http://placehold.it/940x280" />
+                            {% else %}
+                                <img 
+                                    src="{{files[0].src}}" 
+                                    alt="{{files[0].name}}"
+                                    onclick="Lightbox.open()">
+                            {% endif %}
+
+                            <div class="lightbox-target">
+                                <img src="{{files[0].src}}" alt="{{files[0].name}}}}">
+                                <a 
+                                    href="#" 
+                                    class="lightbox-close"
+                                    onclick="Lightbox.close()">
+                                    <i class="material-icons">close</i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-preview">
+                            {% for image in files %}
+                                <img src="{{image.src}}" 
+                                    alt="{{image.name}}"
+                                    {% if loop.index0 == 0%}
+                                        class="active"
+                                    {% endif %}
+                                    onclick="ImageGallery.setImage(event)">
+                            {% endfor %}                    
+                        </div>
+                    </div>
+                
+
+                <div class="recipes-titulo">
+                    <p>{{recipes.title}}</p>
+                </div>
+
+                <div class="recipes-autor">
+                    <p>por {{recipes.name}}</p>
+                </div>        
+
+                <div class="muda">
+                    <div class="combo">
+                        <div class="receita-subtitulo">
+                            <p>Ingredientes</p>
+                        </div>
+                        <div class="mostrar-esconder" id="showhide1">
+                            <p> Esconder </p>
+                        </div>
+                    </div>
+                    <div class="receita-texto" id="texto1">
+                        <ul>
+                        {% for ingredient in recipes.ingredients %}
+                            <li> {{ingredient}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="muda">
+                    <div class="combo">
+                        <div class="receita-subtitulo">
+                            <p>Modo de Preparo</p>
+                        </div>
+                        
+                        <div class="mostrar-esconder" id="showhide2">
+                            <p> Esconder </p>
+                        </div>                
+                    </div>        
+                    <div class="receita-texto" id="texto2">
+                        {% for preparation in recipes.preparation %}
+                            <p>{{preparation}}</p>
+                        {% endfor %}                
+                    </div>
+                </div>
+                    
+                <div class="muda">
+                    <div class="combo">
+                        <div class="receita-subtitulo">
+                            <p>Informações Adicionais</p>                
+                        </div>
+                                        
+                        <div class="mostrar-esconder" id="showhide3">
+                            <p> Esconder </p>
+                        </div>                
+                    </div>
+                    <div class="receita-texto" id="texto3">
+                        <p>{{recipes.information}}</p>                
+                    </div>
+                </div>
+            </div>
+    </section>  
+
+    <script src="/scripttoggler.js"></script>
+    <script src="/scriptsadmin.js"></script>
+
+{% endblock %}
+
+
+
+
+
+    

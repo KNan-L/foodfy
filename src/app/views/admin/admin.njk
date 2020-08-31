@@ -1,0 +1,32 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Admin</title>
+{% endblock %}
+
+{% block content %}
+<section class="back">
+    <div class="div-novo">
+        <p class="titulo-admin">Painel do Usuário</p>  
+    </div>
+
+    <div class="painel">            
+        <div class="">
+            <div class="painel-img">
+                <img src="assets/account.png" alt="">
+            </div>            
+        </div>    
+        <div class="right">
+                <div>
+                    <p class="receita-titulo divpainel">Perfil do Usúario</p>              
+                    <a href="admin/profile" class="linkrecipes">Visualizar</a>                
+                </div>    
+                <div>
+                    <p class="receita-titulo divpainel">Receitas cadastradas pelo Usúario</p>              
+                    <a href="admin/users/recipes" class="linkrecipes">Visualizar</a>                
+                </div>                       
+            </div>    
+    </section>   
+    
+</section>
+{% endblock %}

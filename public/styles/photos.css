@@ -1,0 +1,342 @@
+/* Photos Upload*/
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    margin-top: 20px;
+}
+form .edit #photos-upload .addimagem {
+    width: 150px;
+    height: 150px;
+    color: white;
+    border: 1px solid rgb(143, 140, 140);
+    margin: 20px;    
+    right: 0;
+}
+
+
+form .edit #photos-upload .addimagem i {
+    
+    position: relative;
+    width: 150px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    color: rgb(143, 140, 140);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 500%;
+    cursor: pointer;
+}
+
+form .edit #photos-upload {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 200px;
+    margin-top: 0;
+}
+
+form .edit #photos-upload p {
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -6px #333;
+    background-color: #6558C3;
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+form .edit #photos-input {
+    padding: 0;
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Preview */
+
+form .edit #photos-preview {    
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-gap: 8px;
+    width: 100%;
+    align-items: center;
+}
+
+form .edit #photos-preview img {
+    width: 100%;    
+    height: 150px;
+    
+
+    object-fit: cover;
+}
+
+form .edit #photos-preview .photo{
+    position: relative;
+}
+
+form .edit #photos-preview .photo i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: red;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 500%;
+    cursor: pointer;
+
+    transition: opacity 200ms;
+    opacity: 0;
+}
+
+form .edit #photos-preview .photo:hover i {
+    opacity: 1;
+}
+/*===================================================================*/
+/* Photos Upload*/
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    margin-top: 20px;
+}
+.imagemedit .edit #photos-upload .addimagem {
+    width: 150px;
+    height: 150px;
+    color: white;
+    border: 1px solid rgb(143, 140, 140);
+    margin: 20px;    
+    right: 0;
+}
+
+
+.imagemedit .edit #photos-upload .addimagem i {
+    
+    position: relative;
+    width: 150px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    color: rgb(143, 140, 140);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 500%;
+    cursor: pointer;
+}
+
+.imagemedit .edit #photos-upload {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 200px;
+    margin-top: 0;
+}
+
+.imagemedit .edit #photos-upload p {
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -6px #333;
+    background-color: #6558C3;
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.imagemedit .edit #photos-input {
+    padding: 0;
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Preview */
+
+.imagemedit .edit #photos-preview {    
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-gap: 8px;
+    width: 100%;
+    align-items: center;
+}
+
+.imagemedit .edit #photos-preview img {
+    width: 100%;    
+    height: 150px;
+    
+
+    object-fit: cover;
+}
+
+.imagemedit .edit #photos-preview .photo{
+    position: relative;
+}
+
+.imagemedit .edit #photos-preview .photo i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: red;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 500%;
+    cursor: pointer;
+
+    transition: opacity 200ms;
+    opacity: 0;
+}
+
+.imagemedit .edit #photos-preview .photo:hover i {
+    opacity: 1;
+}
+
+/*Image Gallery*/
+
+.gallery{
+    width: 100%;
+}
+
+.gallery .highlight > img {
+    width: 100%;
+    height: 280px;
+
+    cursor: zoom-in;
+}
+
+.gallery .gallery-preview{
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    justify-content: right;
+    grid-gap: 4px;
+}
+
+.gallery .gallery-preview img {
+    height: 50px;
+    width: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.6;
+    cursor: pointer;
+
+    transition: 200ms;
+    margin-top: 8px;
+}
+
+.gallery .gallery-preview img:hover,
+.gallery .gallery-preview img:active {
+    opacity: 1;
+}
+
+/*Light BOX gallery*/
+.gallery .highlight .lightbox-target {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    overflow: hidden;
+    z-index: 100;
+
+    top: -100%;
+    left: 0;
+    opacity: 0;
+
+    transition: opacity 400ms;
+}
+
+.gallery .highlight .lightbox-target img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+
+    width: 90%;
+    height: 90%;
+
+    object-fit: contain;
+}
+
+.gallery .highlight a.lightbox-close {
+    width: 50px;
+    height: 50px;
+
+    background: white;
+
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 400ms;
+}
+
+/*Photos Chef */
+
+.edit .chef-photos #photos-upload p {
+    box-sizing: border-box;   
+}
+
+.edit .chef-photos #photos-input{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}

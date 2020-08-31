@@ -1,0 +1,38 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Admin/Users</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="back users">
+    <div class="div-novo">
+        <p class="titulo-admin">Receitas cadastradas por você {{userName}}</p>        
+    </div>
+        
+    <section class="receitas admin"> 
+
+        {% for item in items %}
+
+                <div class="receita admin">
+                    <div class="receita-imagem">
+                        <img src="{{item.file.src}}" alt="">
+                    </div>
+                
+                    <div>
+                        <p class="receita-titulo">{{ item.title }}</p>
+                        <p class="receita-autor">{{ item.name }}</p>
+                        <input id="input" type="hidden" name="id" value={{item.id}}>
+                        <a class="linkrecipes">Visualizar</a>
+                    </div>
+                
+                </div>
+
+        {% endfor %}   
+    </section>
+</section>
+
+    <script src="/scriptsadmin.js"></script>    
+
+{% endblock %}

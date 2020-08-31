@@ -1,0 +1,107 @@
+    <div class="imagemedit">
+        <div class="edit">
+            <p class="edit-titulo">Imagem da receita</p>
+            <div class="container">
+                <div id="photos-upload">
+                    <div class="addimagem"> 
+                        <i class="material-icons"> add </i>
+                    </div>
+                    <input 
+                        id="photos-input"
+                        type="file" 
+                        name="photos"
+                        multiple
+                        accept="image/*"
+                        onchange="PhotosUpload.handleFileInput(event)"
+                    >
+                </div>
+
+                <div id="photos-preview">
+                    {% if files %}
+                        {% for image in files %}
+                            <div class="photo" id="{{image.id}}">
+                                <img src="{{image.src}}" alt="{{image.name}}">
+                                <i class="material-icons"
+                                    onclick="PhotosUpload.removeOldPhoto(event)">close
+                                </i>
+                            </div>
+                        {% endfor %}
+                        <input type="hidden" name="removed_files">
+                    {% endif %}
+                </div>
+            </div>        
+                
+        </div>
+    </div>
+
+    <div class="edit">
+        <p class="edit-titulo">Titulo da Receita</p>
+        <input 
+            type="text" 
+            name="title"
+            value="{{recipes.title}}"
+
+        >    
+    </div>
+
+    <div class="edit">
+        <p class="edit-titulo">Autor da Receita</p>
+        <select name="chef">
+            {% for chef in chefOptions %}
+                <option value="{{chef.id}}"
+                    {% if chef.id == recipes.chef_id %}
+                        selected
+                    {% endif %}
+                    >{{chef.name}}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+    
+    <div class="edit">
+        <p class="edit-titulo">Ingredientes</p>
+        <div id="ingredients">
+            {% for ingredient in recipes.ingredients%}
+                <div class="ingredient">
+                    <input 
+                        type="text" 
+                        name="ingredients[]"                    
+                        value="{{ingredient}}"
+                        placeholder="Ingrediente"                    
+                    >    
+                </div>
+            {% endfor %}   
+        </div>
+            
+        <a type="button" class="add-ingredient">Adicionar novo ingrediente</a>
+    </div>
+    
+    <div class="edit">
+        <p class="edit-titulo">Modo de Preparo</p>
+
+        <div id="preparos">
+            {% for steps in recipes.preparation%}
+                <div class="preparo">                
+                    <input 
+                        type="text" 
+                        name="preparation[]"
+                        placeholder="preparo"
+                        value="{{steps}}"
+                    >                
+                </div>
+            {% endfor %}
+        </div>        
+        <a type="button" class="add-preparo">Adicionar novo passo</a>
+    </div>
+
+    <div class="edit">
+        <p class="edit-titulo">Informações adicionais</p>
+        <input class="informationmaior"
+            type="text" 
+            name="information"
+            value="{{recipes.information}}"
+        >            
+    </div>
+
+    <script src="/scriptsadmin.js"></script>  
+        

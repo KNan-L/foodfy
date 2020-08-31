@@ -1,0 +1,45 @@
+{% extends "layoutadmin.njk" %}
+{% import "confirm.njk" as confirm %}
+
+
+{% block head %}
+    <title>Foodfy - Receita</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="back">
+    <div>       
+        <span class="div-novo buttoncreate">
+         <p class="titulo-admin">Editando Receita</p>
+            <span class="divbutton">
+                <form id="form-delete" method="POST" action="/admin/chefs?_method=DELETE">
+                    <input type="hidden" name="id" value={{chef.id}}>
+                    <button type ="submit" class="buttondel">Deletar</button>
+                </form>
+ 
+
+    
+    <form method="POST" action="/admin/chefs?_method=PUT" enctype="multipart/form-data">
+          
+            
+            
+    
+
+        {% include "admin/chefs/fields.njk" %}
+
+        <input type="hidden" name="id" value="{{chef.id}}">
+
+    </form>
+
+        
+</section>  
+{{confirm.confirmdelete('form-delete')}}
+
+<script src="/scriptsadmin.js"></script>  
+{% endblock %}
+
+
+
+
+    

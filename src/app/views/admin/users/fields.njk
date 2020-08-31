@@ -1,0 +1,47 @@
+
+    <button class="button" href="">Salvar</button>   
+            </span>           
+        </span>   
+</div>
+
+
+        <div class="users edit">
+            <div>
+                <p class="edit-titulo">Nome</p>
+                <input                 
+                    type="text" 
+                    name="name"
+                    value="{{user.name}}"
+
+                >
+            </div>    
+                
+            <div>
+                <p class="edit-titulo">Email</p>
+                <div class="input">
+                    <input                     
+                        type="email" 
+                        name="email"
+                        value="{{user.email}}"
+                        onblur="Validate.apply(this, 'isEmail')"
+                    >
+                </div>
+            </div>    
+        </div>     
+
+        <div class=admincheck>
+            <input 
+                type="checkbox"
+                name="is_admin"
+                id="check"
+                value="true"                
+                {% if user.is_admin %}
+                    checked
+                {% endif %}   
+            >   
+            <label for="admin">Administrador</label>               
+        </div>     
+        
+    
+
+        

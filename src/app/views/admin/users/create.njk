@@ -1,0 +1,69 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Usúario</title>
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="/admin/users">
+    <section class="back admin-users users">
+        <div>
+            <div class="div-novo buttoncreate">
+                <p class="titulo-admin">Criar Usúario</p>
+                <span>        
+                    <button class="button" href="">Salvar</button>
+                    <a href="" class="button cancel">Cancelar</a>    
+                </span>           
+            </div>   
+        </div>
+        
+
+
+        <div class="users edit">
+            <div>
+                <p class="edit-titulo">Nome</p>
+                <input                 
+                    type="text" 
+                    name="name"
+                    value="{{user.name}}"
+
+                >
+            </div>    
+                
+            <div>
+                <p class="edit-titulo">Email</p>
+                <div class="input">
+                    <input                     
+                        type="email" 
+                        name="email"
+                        value="{{user.email}}"
+                        onblur="Validate.apply(this, 'isEmail')"
+                    >
+                </div>
+            </div>    
+        </div>     
+
+        <div class=admincheck>
+            <input 
+                type="checkbox"
+                name="is_admin"
+                id="check"
+                value="true"
+>   
+            <label for="admin">Administrador</label>               
+        </div>     
+
+    </section>
+
+</form>
+
+<script src="/scriptsadmin.js"></script>  
+
+
+
+{% endblock %}
+
+
+
+
+    

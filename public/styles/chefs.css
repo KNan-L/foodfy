@@ -1,0 +1,100 @@
+/* ADMIN CHEFS */
+
+/* Index Chefs */
+.back {
+    width: 940px;
+    min-height: 500px;
+    margin: 0 auto;    
+    margin-bottom: 20px;
+}
+
+.titulo-admin {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    padding: 20px 0;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.chef {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.chef-imagem {
+    text-align: center;
+}
+
+.chef-imagem img{
+    width: 64px;
+    height: 64px;
+    border-radius: 30px;
+}
+
+.chef div:nth-child(2) {
+    justify-items: center;
+}
+
+.chef-name {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+/* SHOW */
+
+.recipes.admin .chef-imagem img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.recipes.admin .chef-name{    
+    font-weight: bold;
+
+    font-size: 36px;
+    color: #111111;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.recipes.admin .chef-recipes{    
+    font-weight: 400;
+    padding-top: 15px;
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
+}
+
+#titulo-gerenciar .titulo-admin.chefrecipes{
+    padding-top: 0;
+}
+
+/* Chefs User*/
+
+.chefs .titulo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    padding-bottom: 15px;
+}
+
+.chef-user .chef-name {
+    font-weight: 400;
+    font-size: 18px;
+    color: #111111;
+}
+
+.chef-user .chef-recipes{
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    padding: 5px 0;
+}

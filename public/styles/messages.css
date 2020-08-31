@@ -1,0 +1,37 @@
+/*========================== messages ==================*/
+@keyframes hidemessage {
+    to {
+        top: -50px;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.messages {
+    display: flex;
+    width: 344px;
+    height: 135px;
+
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    padding: 16px;     
+    margin-top: 15px;
+    margin-right: 14px;
+
+    color: white;
+    top: 0;
+    right: 0;
+    opacity: 1;
+
+    animation: hidemessage 400ms 5s ease-out forwards;
+}
+
+.messages.error{
+    background-color: #e74c3c;
+}
+
+.messages.success {
+    background-color: rgb(122, 182, 30);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    {% block head %}
+
+        <title>Foodfy</title>
+
+    {% endblock %}
+
+    {% include "parts/styles.njk" %}
+
+</head>
+
+<body>
+
+{% include "parts/messages.njk"%}
+{% block header %}
+    <header class="header-admin">        
+        <nav class="menu-admin">
+            
+                <a href="/admin"><img src="/logowhite.png" alt="logo"></a>
+                <a href="/admin/recipes"> RECEITAS </a>
+                <a href="/admin/chefs"> CHEFS </a> 
+                <a href="/admin/users"> USÚARIOS </a>             
+            <form action="/admin/logout" method="POST">
+                <button>Sair</button>
+            </form>
+        </nav>                
+
+    </header>
+{% endblock %}
+
+
+    {% block content %} {% endblock %}
+
+<footer class="footer">
+    <p>Todos direitos reservados, receitas Foodfy.</p>    
+</footer>
+
+</body>
+</html>

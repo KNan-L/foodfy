@@ -1,0 +1,44 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Admin</title>
+{% endblock %}
+
+{% block content %}
+<div class="back admindiv">
+    <div class="div-novo">
+        <p class="titulo-admin">Gerenciar Receitas</p>
+        <a class="button" href="/admin/recipes/create">Novo</a>    
+    </div>
+
+
+    <section class="receitas admin">    
+
+        {% for item in items %}
+
+            <div class="receita admin">
+                <div class="receita-imagem">
+                    <img src="{{item.file.src}}" alt="">
+                </div>
+             
+                <div>
+                    <p class="receita-titulo">{{ item.title }}</p>
+                    <p class="receita-autor">{{ item.name }}</p>
+                    <input id="input" type="hidden" name="id" value={{item.id}}>
+                    <a class="linkrecipes">Visualizar</a>
+                </div>
+             
+            </div>
+
+        {% endfor %}
+
+        
+    </section>
+    <div class="pagination"
+            data-page = {{pagination.page}}
+            data-total = {{pagination.total}}>        
+        </div>
+
+    <script src="/scriptsadmin.js"></script>    
+</div>
+{% endblock %}

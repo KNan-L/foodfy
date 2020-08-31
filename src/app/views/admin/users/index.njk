@@ -1,0 +1,37 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Admin/Users</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="back users">
+    <div class="div-novo">
+        <p class="titulo-admin">Usúarios</p>
+        <a class="button" href="/admin/users/create">Novo</a>
+    </div>
+        
+    <div class="card">
+        {% for user in users %}
+            <div class="user">        
+                <div>
+                    <p class="user-name">{{user.name}}</p>
+                    <p class="user-email">{{user.email}}</p>
+                    <input id="input" type="hidden" name="id" value={{user.id}}>
+                    <div class="linkbuttonuser">
+                        <a class="linkuser">Editar</a>                    
+                        <a class="linkuser del" href="/admin/users/edit/{{user.id}}">Remover</a>
+                    </div>
+                    
+                </div>                
+            </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+    <script src="/scriptsadmin.js"></script>    
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Chef</title>
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="/admin/chefs" enctype="multipart/form-data">
+    <section class="back">
+        <div>
+            <span class="div-novo buttoncreate">
+                <p class="titulo-admin">Criando Chef</p>
+                <span>
+            
+
+        {% include "admin/chefs/fields.njk" %}
+
+    </section>
+
+</form>
+
+<script src="/scriptsadmin.js"></script>  
+
+
+
+{% endblock %}
+
+
+
+
+    

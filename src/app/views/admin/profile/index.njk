@@ -1,0 +1,71 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receita</title>
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="/admin/profile?_method=PUT">
+    <section class="back admin-users">
+
+        <div>
+            <span class="div-novo buttoncreate">
+                <p class="titulo-admin">Bem vindo {{user.name}}</p>
+                <span>        
+                    <button class="button" href="">Salvar</button>
+                </span>           
+            </span>   
+        </div>
+
+
+        <div class="users edit">
+            <div>
+                <p class="edit-titulo">Nome</p>
+                <input                 
+                    type="text" 
+                    name="name"
+                    value="{{user.name}}"
+                >
+            </div>    
+                
+            <div>
+                <p class="edit-titulo">Email</p>
+                <input                     
+                    type="email" 
+                    name="email"
+                    value="{{user.email}}"
+                >
+            </div>    
+        </div>     
+
+        <div class="edit password">
+            <p class="edit-titulo">Senha</p>
+            <input                     
+                type="password" 
+                name="password"
+                placeholder="Digite sua senha para alterar o cadastro."
+                value=""
+            >
+        </div> 
+
+        <input 
+                type="hidden"
+                name="id"
+                value="{{user.id}}">
+        </div>
+
+
+    </section>
+
+</form>
+
+<script src="/scriptsadmin.js"></script>  
+
+
+
+{% endblock %}
+
+
+
+
+    

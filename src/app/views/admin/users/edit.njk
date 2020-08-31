@@ -1,0 +1,42 @@
+{% extends "layoutadmin.njk" %}
+{% import "confirm.njk" as confirm %}
+
+
+{% block head %}
+    <title>Foodfy - Usúario</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="back users admin-users">
+    <div>       
+        <span class="div-novo buttoncreate">
+         <p class="titulo-admin">Editando Usúario</p>
+            <span class="divbutton">
+                <form id="form-delete" method="POST" action="/admin/users?_method=DELETE">
+                    <input type="hidden" name="id" value={{user.id}}>
+                    <button type ="submit" class="buttondel">Deletar</button>
+                </form>
+ 
+
+    
+    <form method="POST" action="/admin/users?_method=PUT">
+            
+
+        {% include "admin/users/fields.njk" %}
+
+        <input type="hidden" name="id" value="{{user.id}}">
+
+    </form>
+
+        
+</section>  
+{{confirm.confirmdelete('form-delete')}}
+
+<script src="/scriptsadmin.js"></script>  
+{% endblock %}
+
+
+
+
+    

@@ -1,0 +1,68 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receita</title>
+{% endblock %}
+
+{% block header %}
+
+<div class="div-novo logo">
+        <a href="/"><img src="/logo.png" alt="logo"></a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="/admin/login">
+    <section class="admin-users users">
+            <div>
+                <span class="div-novo login">
+                    <p class="titulo-admin">Iniciar Sessão</p>     
+                </span>   
+            </div>
+
+        <div class="login">
+
+            <div class="users edit login">
+                <div>
+                    <p class="edit-titulo">Email</p>
+                    <div class="input">
+                        <input                     
+                            type="email" 
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            value="{{user.email}}"
+                            onblur="Validate.apply(this, 'isEmail')"
+                        >
+                    </div>
+                </div>    
+            </div>     
+
+            <div class="edit password login">
+                <p class="edit-titulo">Senha</p>
+                <input                     
+                    type="password" 
+                    name="password"
+                    placeholder="Digite sua senha"
+                >
+            </div> 
+
+            <span class="loginbutton">        
+                <a class="linkuser" href="forgot-password">Perdeu a Senha</a>
+                <button class="button" href="">Entrar</button>
+            </span>      
+        </div>
+    </section>
+
+</form>
+
+<script src="/scriptsadmin.js"></script>  
+
+
+
+{% endblock %}
+
+
+
+
+    

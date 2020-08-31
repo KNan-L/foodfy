@@ -1,0 +1,191 @@
+/* ADMIN */
+/* RECEITAS */
+#titulo-gerenciar {
+    width: 940px;
+    margin: 0 auto;
+}
+
+#titulo-gerenciar .titulo-admin{
+    padding: 0;
+    padding-top: 20px;
+}
+
+.receitas.admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.receita.admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    cursor: auto;
+}
+
+.receita.admin .receita-imagem{
+    width: 172px;
+    height: 80px;
+    padding-bottom: 0;
+}
+
+.receita.admin img{
+    height: 80px;
+    object-fit: cover;
+    padding-bottom: 0;
+}
+
+.receita.admin .receita-autor{
+    padding: 0;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.linkrecipes,
+.add-ingredient,
+.add-preparo,
+.linkchefs,
+.linkuser  {
+    padding: 0;
+    color: #6558C3;
+    font-size: 14px;    
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.linkrecipes:hover,
+.add-ingredient:hover
+.add-preparo:hover,
+.linkchefs:hover,
+.linkuser:hover {
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+
+/* RECEITA EDITAR*/
+.divbutton{
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+/* .divbutton{
+    width: 940px;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+} */
+
+.button {
+    background: rgb(100, 88, 195);
+    width: 139px;
+    border-radius: 4px;
+    font-family: Roboto-Bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 9px 20px;  
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.recipes.admin {
+    margin-top: 20px;
+}
+
+.recipes.admin .recipes-imagem img{
+    width: 940px;
+    height: 280px;
+    border-radius: 15px;
+}
+
+/*.titulo-topo {
+    padding-bottom: 50px;
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    color: #111111;
+    text-align: center;
+}*/
+
+/* Receita Editando */
+/*
+.nova-receita > div:nth-child(1),
+.novo-chef > div:nth-child(1){
+    width: 940px;
+    margin-top: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    color:#111111;
+}*/
+
+.edit input,
+.information,
+select {
+    width:100%;
+    margin-bottom: 4px;
+    padding: 8px 16px;
+    border: 1px solid #DDDDDD;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.edit-titulo {
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#ingredients .ingredient {
+    margin-top: 0;
+}
+
+.buttoncreate {
+    width: 940px;
+    margin-top: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    color:#111111;
+}
+
+/*.divbuttonsedit span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    color:#111111;
+}*/
+
+.buttondel {
+    background-color: #DC4747;
+    border-radius: 4px;
+    font-family: Roboto-Bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 9px 20px;  
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 10px;
+}

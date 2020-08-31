@@ -1,0 +1,36 @@
+{% extends "layoutadmin.njk" %}
+
+{% block head %}
+    <title>Foodfy - Admin/Chefs</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="back chefs">
+    <div class="div-novo">
+        <p class="titulo-admin">Gerenciar Chefs</p>
+        <a class="button" href="/admin/chefs/create">Novo</a>
+    </div>
+        
+        <div class="card">
+            {% for chef in chefs %}
+                <div class="chef">
+                    <div class="chef-imagem">
+                        <img src="{{chef.file.src}}" alt="">
+                    </div>
+                
+                    <div>
+                        <p class="chef-name">{{chef.name}}</p>
+                        <input id="input" type="hidden" name="id" value={{chef.id}}>
+                        <a class="linkchefs">Visualizar</a>
+                    </div>                
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+    <script src="/scriptsadmin.js"></script>    
+
+{% endblock %}

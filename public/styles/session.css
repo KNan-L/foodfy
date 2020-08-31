@@ -1,0 +1,64 @@
+
+/*LOGIN*/
+.div-novo.logo a{
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+.login{
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.admin-users .login .users.edit input,
+.admin-users .login .edit.password input {
+    width: 500px;
+}
+
+.login .linkuser{
+    color: #969696;;
+}
+
+.loginbutton{
+    display: flex;
+    justify-content: space-between;       
+    margin-top: 25px;    
+}
+
+.div-novo.login{
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.loginbutton.forgot{
+    display: grid;       
+    grid-template-columns: 1fr 1fr;
+    margin-top: 25px;    
+}
+
+.loginbutton.forgot button{
+    grid-column: 2;
+    justify-self: end;
+}
+
+/*Validate Input*/
+
+.input .error {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 8px 16px;
+    border: 1px solid red;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.input .errormsg {
+    background-color: #e74c3c;
+    padding: 4px;
+    border-radius: 4px;
+    color: white;
+}
+

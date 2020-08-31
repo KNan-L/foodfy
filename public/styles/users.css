@@ -1,0 +1,68 @@
+/*USERS */
+.users.edit {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 20px;
+}
+
+.admin-users .users.edit input,
+.admin-users .edit.password input{
+    width: 450px;
+    box-sizing: border-box;
+}
+
+.admincheck input{
+    margin-top: 30px;
+    margin-right: 8px;
+}
+
+.admin-users .cancel{
+    margin-left: 16px;
+    background: #8A8A8A;
+}
+
+/* USER list*/
+
+.users .card{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 200px;
+    grid-row-gap: 52px;
+    
+}
+
+.user-name{
+    font-family: Helvetica;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 4px;
+}
+
+.user-email{
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 16px;
+}
+
+.linkbuttonuser{
+    height: 18px;
+    display: flex;
+}
+
+.linkuser.del{
+    margin-left: 16px;
+    color: #F55A5A;
+}
+
+/*Users show*/
+.users .show{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.users .show p{
+    width: 200px;
+    padding: 10px;
+    margin: 0 auto;
+}
